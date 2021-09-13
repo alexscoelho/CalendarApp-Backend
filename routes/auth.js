@@ -5,6 +5,7 @@
 
 const { Router } = require("express");
 const { check } = require("express-validator");
+const { validarCampos } = require("../middlewares/validar-campos");
 const router = Router();
 
 const {
@@ -23,6 +24,7 @@ router.post(
       "password",
       "El password debe ser de al menos 6 caracteres"
     ).isLength({ min: 6 }),
+    validarCampos,
   ],
   crearUsuario
 );
@@ -35,6 +37,7 @@ router.post(
       "password",
       "El password debe ser de al menos 6 caracteres"
     ).isLength({ min: 6 }),
+    validarCampos,
   ],
   loginUsuario
 );
