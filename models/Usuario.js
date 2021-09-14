@@ -12,7 +12,7 @@ const UsuarioSchema = Schema({
     require: true,
     unique: true,
   },
-  name: {
+  password: {
     type: String,
     require: true,
   },
